@@ -3,5 +3,8 @@ form.addEventListener("submit", async function (e) {
   e.preventDefault();
   const searchTerm = form.elements.query.value;
   const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-  console.log(res.data);
+
+  const img = document.createElement("img");
+  img.src.res.data[5].show.image.medium;
+  document.body.append(img);
 });
